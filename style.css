@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+:root {
+    --color-1: #001f23;
+    --color-2: #007a75;
+    --color-3: #5b9489;
+    --color-4: #fcbe8e;
+    --color-5: #ff0021;
+    --time-box-size: 10rem;
+    --date-box-size: 8rem;
+    --time-font-size: 4rem;
+    --date-font-size: 1.5rem;
+    --gap: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-4);
+}
+
+body {
+    background-color: var(--color-1);
+}
+
+#clock {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background: color-mix(in srgb, var(--color-2) 20%, transparent);
+}
+
+#timeClock {
+    display: flex;
+    gap: var(--gap);
+    font-size: var(--time-font-size);
+}
+
+#dateClock {
+    display: flex;
+    gap: 0.8rem;
+    text-transform: capitalize;
+    background: var(--color-1);
+    border-radius: 10px;
+    padding: 1rem 4rem;
+}
+
+.time {
+    min-width: var(--time-box-size);
+    min-height: var(--time-box-size);
+    max-width: var(--time-box-size);
+    max-height: var(--time-box-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--color-3);
+    border-radius: 10px;
+    color: var(--color-1);
+}
+
+.date {
+    font-size: var(--date-font-size);
+}
+
+#timeClock :last-child {
+    margin-left: 2rem;
+    color: var(--color-1);
+    background-color: var(--color-2);
+}
+
+.timespace {
+    width: 3rem;
+    min-height: var(--time-box-size);
+    max-height: var(--time-box-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-3);
+}
+
+#footer {
+    min-height: 10vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 5px solid var(--color-4);
+}
+
+@media only screen and (max-width: 983px) {
+    :root {
+        --time-box-size: 7rem;
+        --time-font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 747px) {
+    :root {
+        --time-box-size: 6rem;
+        --time-font-size: 2rem;
+        --date-font-size: 1.4rem;
+        --gap: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    :root {
+        --time-box-size: 4rem;
+        --time-font-size: 1.5rem;
+        --date-font-size: 1rem;
+        --gap: 0.3rem;
+    }
+
+    .timespace {
+        width: 1rem;
+    }
+    #dateClock{
+        padding: 0.6rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 368px) {
+    :root {
+        --time-box-size: 3.3rem;
+        --time-font-size: 1rem;
+        --date-font-size: 0.5rem;
+        --date-box-size: 0.4rem;
+        --gap: 0;
+    }
+}
+
+@media only screen and (max-width: 386px) {
+    :root {
+        --time-box-size: 2.5rem;
+        --time-font-size: 0.9rem;
+        --date-font-size: 1rem;
+        --gap: 0;
+    }
+}
